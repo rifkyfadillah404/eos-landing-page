@@ -145,6 +145,16 @@
   letter-spacing: 0.2em;
 }
 
+.desktop-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.desktop-cta {
+  display: inline-flex;
+}
+
 .nav-links a {
   color: #475569;
   font-weight: 500;
@@ -256,7 +266,6 @@
   color: rgba(30, 41, 59, 0.75);
   font-size: 1.075rem;
   font-weight: 400;
-  text-align: center;
 }
 
 .hero-actions {
@@ -264,7 +273,6 @@
   gap: 1rem;
   flex-wrap: wrap;
   margin-bottom: 2.5rem;
-  justify-content: center;
 }
 
 .primary-cta,
@@ -310,8 +318,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  text-align: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .metric-value {
@@ -1172,12 +1179,13 @@ main {
   .hero-content {
     grid-template-columns: 1fr;
     gap: 2rem;
-    padding-top: 2rem;
+    width: 100%;
+    max-width: none;
   }
 
   .hero-copy {
-    align-items: center;
-    text-align: center;
+    align-items: flex-start;
+    text-align: left;
   }
 
   .hero-copy h1 {
@@ -1186,6 +1194,7 @@ main {
 
   .hero-subheadline {
     font-size: clamp(0.95rem, 3vw, 1.1rem);
+    max-width: 100%;
   }
 
   .hero-animation {
@@ -1196,6 +1205,7 @@ main {
   .hero-actions {
     flex-direction: column;
     gap: 1rem;
+    width: 100%;
   }
 
   .primary-cta,
@@ -1204,7 +1214,12 @@ main {
   }
 
   .hero-metrics {
-    grid-template-columns: minmax(0, 1fr);
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .hero-metrics div {
+    align-items: flex-start;
   }
 
   .value-grid {
