@@ -31,12 +31,6 @@ export function FallingText({ text, className = '' }: FallingTextProps) {
       opacity: 1,
       rotateX: 0,
       scale: 1,
-      transition: {
-        type: 'spring',
-        damping: 10,
-        stiffness: 150,
-        mass: 1,
-      },
     },
   }
 

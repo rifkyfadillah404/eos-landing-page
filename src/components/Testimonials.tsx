@@ -15,20 +15,12 @@ const containerVariants = {
 
 const headerVariants = {
   hidden: { opacity: 0, y: 30 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.6, ease: 'easeOut' },
-  },
+  visible: { opacity: 1, y: 0 },
 }
 
 const cardVariants = {
   hidden: { opacity: 0, y: 40 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { duration: 0.7, ease: [0.25, 0.46, 0.45, 0.94] },
-  },
+  visible: { opacity: 1, y: 0 },
 }
 
 export function Testimonials() {
@@ -51,12 +43,12 @@ export function Testimonials() {
       </motion.div>
 
       <div className="testimonials-grid">
-        {testimonials.map((testimonial, index) => (
+        {testimonials.map((testimonial) => (
           <motion.div
             key={testimonial.author}
             className="testimonial-card"
             variants={prefersReducedMotion ? undefined : cardVariants}
-            whileHover={prefersReducedMotion ? undefined : { y: -8, transition: { duration: 0.3 } }}
+            whileHover={prefersReducedMotion ? undefined : { y: -8 }}
           >
             <div className="testimonial-quote-icon">
               <svg width="40" height="32" viewBox="0 0 40 32" fill="none">
